@@ -4,7 +4,7 @@ A machine learning web application that predicts whether a student is likely to 
 
 ## 🚀 Live Demo
 
-🔗 Demo: https://your-app-name.onrender.com
+🔗 Demo: https://placement-predictor.onrender.com
 
 ## 📌 Overview
 
@@ -70,7 +70,7 @@ placement-predictor/
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/placement-predictor.git
+git clone https://github.com/ramjeerk12/placement-prediction-system.git
 ```
 
 Move into the project directory:
@@ -108,9 +108,9 @@ streamlit run app.py
 
 ## 👨‍💻 Author
 
-Bali Kumar
+Ramjee Kumar
 
-GitHub: https://github.com/yourusername
+GitHub: https://github.com/ramjeerk12
 
 ## ⭐ Acknowledgements
 
