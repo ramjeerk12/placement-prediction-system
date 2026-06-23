@@ -1,28 +1,24 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
+import streamlit as st
 import pickle
 import numpy as np
-
-app = FastAPI()
 
 model = pickle.load(open("model.pkl", "rb"))
 scaler = pickle.load(open("scaler.pkl", "rb"))
 
-class Student(BaseModel):
-    cgpa: float
-    iq: float
+st.title("🎓 Placement Prediction System")
 
-@app.get("/")
-def home():
-    return {"message": "Placement Predictor API Running"}
+cgpa = st.number_input("Enter CGPA", min_value=0.0, max_value=10.0)
 
-@app.post("/predict")
-def predict(data: Student):
+iq = st.number_input("Enter IQ Score", min_value=0)
 
-    x = np.array([[data.cgpa, data.iq]])
+if st.button("Predict"):
 
-    x = scaler.transform(x)
+    data = np.array([[cgpa, iq]])
+    data = scaler.transform(data)
 
-    result = model.predict(x)
+    prediction = model.predict(data)
 
-    return {"placement": int(result[0])}
+    if prediction[0] == 1:
+        st.success("✅ Student is likely to be Placed")
+    else:
+        st.error("❌ Student is likely NOT to be Placed")
