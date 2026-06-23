@@ -4,7 +4,7 @@ A machine learning web application that predicts whether a student is likely to 
 
 ## 🚀 Live Demo
 
-🔗 Demo: https://placement-predictor.onrender.com
+🔗 Demo: https://placement-prediction-system-luoy.onrender.com/
 
 ## 📌 Overview
 
@@ -49,7 +49,7 @@ Users can enter their CGPA and IQ score, and the system predicts the placement o
 
 ## 📷 Application Preview
 
-![Application Screenshot](assets/demo.png)
+![Application Screenshot](assets/demo.jpeg)
 
 ## 📂 Project Structure
 
